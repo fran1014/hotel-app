@@ -1,3 +1,4 @@
+
 <h2> Reservation List </h2>
 
 <ul *ngIf="reservations.length; else noReservation">
@@ -7,6 +8,7 @@
         Room No.: {{reservation.roomNumber}} <br>
         Check-In: {{reservation.checkInDate}} <br>
         Check-Out: {{reservation.checkOutDate}} <br>
+        <button (click)="deleteReservation('reservation.id')" > Delete </button>
     </li>
 </ul> 
 
