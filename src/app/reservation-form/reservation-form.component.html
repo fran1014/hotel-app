@@ -17,39 +17,34 @@
 
 </div>
 
-<div class="row">
+<div class="row mb-3">
+    <div class="col">
+        <label class="form-label"> Guest Name: </label>
+        <input class="form-control" type="text" formControlName="guestName">
+        <small class="text-danger" *ngIf="reservationForm.get('guestName')?.invalid && reservationForm.get('guestName')?.touched "> Guest Name is required. </small>
+
+    </div>
+    <div class="col">
+        <label class="form-label"> Guest Email: </label>
+        <input class="form-control" type="email" formControlName="guestEmail">
+        <small class="text-danger" *ngIf="reservationForm.get('guestEmail')?.invalid && reservationForm.get('guestEmail')?.touched "> Guest Email is required. </small>
+
+    </div>
     <div class="col">
 
     </div>
 
 </div>
 
-<div class="row">
-
-
-</div>
-
-    
-
-    <div class="mb-3">
-        <label class="form-label"> Guest Name: </label>
-        <input class="form-control" type="text" formControlName="guestName">
-        <small class="text-danger" *ngIf="reservationForm.get('guestName')?.invalid && reservationForm.get('guestName')?.touched "> Guest Name is required. </small>
-    </div>
-
-    <div class="mb-3">
-        <label class="form-label"> Guest Email: </label>
-        <input class="form-control" type="email" formControlName="guestEmail">
-        <small class="text-danger" *ngIf="reservationForm.get('guestEmail')?.invalid && reservationForm.get('guestEmail')?.touched "> Guest Email is required. </small>
-    
-    </div>
-
-    <div class="mb-3">
+<div class="row mb-3">
+    <div class="col-3">
         <label class="form-label"> Room Number: </label>
         <input class="form-control" type="number" formControlName="roomNumber">
         <small class="text-danger" *ngIf="reservationForm.get('roomNumber')?.invalid && reservationForm.get('roomNumber')?.touched "> Room Number is required. </small>
-    
     </div>
+
+
+</div>
 
     <button class="btn btn-primary" type="submit" [disabled]="reservationForm.invalid" > Submit </button>
 </form> 
